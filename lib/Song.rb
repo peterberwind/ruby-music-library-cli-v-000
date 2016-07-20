@@ -13,7 +13,7 @@ class Song
   end
 
   def self.create(name, artist = nil, genre = nil)
-    new(name, artist, genre).save
+    new(name, artist, genre).tap{|s| s.save}
   end
 
   def self.all
